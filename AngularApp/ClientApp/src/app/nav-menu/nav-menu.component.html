@@ -1,0 +1,82 @@
+<header>
+    <!--<div class="row">
+       social icon
+      <div class="col-sm-12">
+        <ul class="social-network">
+          <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-pinterest"></i></a></li>
+          <li><a class="waves-effect waves-dark" href="#"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3'>
+      <div class="container">
+        <a class="navbar-brand" [routerLink]='["/"]'>AngularApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
+                [attr.aria-expanded]="isExpanded" (click)="toggle()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
+          <ul class="navbar-nav flex-grow">
+            <li class="nav-item">
+              <a routerLink="/" class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/users" class="nav-link" *ngIf="auth.isLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Users</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/posts" class="nav-link" *ngIf="auth.isLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/members" class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Members</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/contactus" class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/register" class="nav-link" *ngIf="!auth.isLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Register</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/login" class="nav-link" *ngIf="!auth.isLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="logout" class="nav-link" *ngIf="auth.isLoggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Logout</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>-->
+
+  <nav class='navbar navbar-expand-md navbar-toggleable-md navbar-dark bg-primary border-bottom box-shadow mb-3'>
+    <div class="container">
+      <a class="navbar-brand" [routerLink]='["/"]'><span class="display-4"><i class="fa fa-globe" aria-hidden="true"></i>BEDU</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-md-inline-flex flex-md-row-reverse" [ngClass]='{"show": isExpanded}'>
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+            <a class="nav-link" [routerLink]='["/"]'>Home</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link" [routerLink]='["/gallery"]'>Gallery</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link" [routerLink]='["/members"]'>Members</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link" [routerLink]='["/news"]'>News</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link" [routerLink]='["/contact"]'>Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
